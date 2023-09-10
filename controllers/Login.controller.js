@@ -23,13 +23,13 @@ loginRouter.post("/", async (req, res, next) => {
           });
         } else {
           return res.status(200).json({
-            success: false,
+            success: true,
             message: "Email or Password is wrong, Try Again!!",
           });
         }
       } else {
         return res.status(200).json({
-          success: true,
+          success: false,
           message:
             "Account Does not Exists, Please create your account to continue!!",
         });
